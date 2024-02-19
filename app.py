@@ -6,11 +6,7 @@ from fastai.vision.all import *
 from PIL import Image
 from fastai.learner import load_learner
 
-import pathlib
-
 from service import set_background
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
 
 import json
 
