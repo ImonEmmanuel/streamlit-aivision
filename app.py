@@ -27,7 +27,8 @@ def label_func(fname):
     category = fname.parts[-2]  # Extract the category name from the path
     return category if category in labels else "unknown"
 
-wound_model = load_learner(open("trained_model\gpu_densenet169.pkl", "rb"), cpu = True)
+
+wound_model = load_learner(open("./trained_model/gpu_densenet169.pkl", "rb"), cpu = True)
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 labels = ["Class_1", "Class_2", "Class_3", "Class_4", "Class_5", "Class_6", "Class_7", "Class_8"]
