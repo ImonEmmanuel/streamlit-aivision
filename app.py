@@ -16,7 +16,7 @@ with open('file.json') as json_file:
 
 st.title("Wound Classification App")
 
-st.write("Upload an image and a trained Ai model will predict its class with giving First Aid Advice") 
+st.write("Upload an image to use an AI model to help diagnose medical injuries while providing Necessary First Aid Precaution") 
 
 def label_func(fname):
     categories = ["Class_"+ str(i) for i in range(1,8)]
