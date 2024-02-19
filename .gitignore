@@ -1,0 +1,24 @@
+# Ignore all Python virtual environment files
+*.pyc
+__pycache__/
+
+# Ignore build artifacts created by your project
+build/
+dist/
+
+# Ignore temporary files
+tmp/
+
+# Ignore log files except for today's log
+*.log
+!logs/`date +"%Y-%m-%d"`.log
+
+
+# Environments
+.streamlitenv
+.venv
+streamlitenv/
+venv/
+ENV/
+env.bak/
+venv.bak/

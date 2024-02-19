@@ -1,0 +1,118 @@
+{
+      "Class_1": {
+        "name": "Abrasions",
+        "description": "Superficial scrapes or scratches on the skin.",
+        "symptoms": ["Redness", "Pain", "Bleeding (minor)"],
+        "first_aid": [
+          "**Seek medical attention** if the wound is deep, large, or shows signs of infection (redness, swelling, pus).",
+          "Otherwise, follow these basic steps:",
+          "1. Clean the wound gently with soap and clean water.",
+          "2. Apply gentle pressure to stop any bleeding.",
+          "3. Cover the wound with a clean bandage or gauze.",
+          "4. Monitor the wound for signs of infection."
+        ]
+      },
+      "Class_2": {
+        "name": "Bruises",
+        "description": "Localized area of tissue damage beneath the skin, due to bleeding from broken blood vessels.",
+        "symptoms": ["Swelling", "Pain", "Discoloration (blue, purple, green, yellow)", "Limited movement (in some cases)"],
+        "first_aid": [
+          "**Seek medical attention** if the bruise is severe, causes significant pain or limited movement, or if you have concerns.",
+          "Otherwise, follow these basic steps:",
+          "1. Apply ice pack wrapped in a cloth to the affected area for 15-20 minutes at a time, several times a day.",
+          "2. Elevate the injured area if possible.",
+          "3. Rest the injured area.",
+          "4. Avoid applying heat or massage directly to the bruise."
+        ]
+      },
+        "Class_3": {
+          "name": "Burns",
+          "description": "Injury to the skin or deeper tissues caused by heat, electricity, chemicals, or radiation.",
+          "symptoms": [
+            "Redness",
+            "Pain",
+            "Swelling",
+            "Blistering (in severe cases)",
+            "Peeling skin (in severe cases)",
+            "Shock (in severe cases)"
+          ],
+          "first_aid": [
+            "**Seek medical attention immediately** if the burn is severe, covers a large area of the body, or is caused by chemicals or electricity.",
+            "For minor burns, follow these steps:",
+            "1. **Cool the burn**: Hold the burned area under cool (not cold) running water for 10 to 20 minutes or until the pain subsides.",
+            "2. **Remove tight clothing or jewelry** from the burned area.",
+            "3. **Protect the burn** with a sterile gauze bandage or a clean cloth.",
+            "4. **Do not apply butter, ointments, or ice** to the burn as these can cause further damage.",
+            "5. **Take over-the-counter pain relievers** like ibuprofen or acetaminophen for pain relief."
+          ]
+        },
+        "Class_4": {
+            "name": "Cut",
+            "description": "A wound or injury caused by a sharp object that penetrates the skin.",
+            "symptoms": [
+              "Bleeding",
+              "Pain",
+              "Swelling",
+              "Redness",
+              "Possibly loss of function (depending on severity and location)"
+            ],
+            "first_aid": [
+              "**Assess the severity** of the cut. If it is severe, deep, or won't stop bleeding, seek medical attention immediately.",
+              "For minor cuts, follow these steps:",
+              "1. **Clean the wound**: Wash your hands and then gently clean the cut with mild soap and water to remove dirt and debris.",
+              "2. **Stop the bleeding**: Apply gentle pressure using a clean cloth or sterile gauze until the bleeding stops.",
+              "3. **Apply an antibiotic ointment** to help prevent infection.",
+              "4. **Cover the cut** with a sterile bandage or adhesive strip.",
+              "5. **Keep the cut clean and dry**, and change the bandage daily or as needed."
+            ]
+          },
+          "Class_5": {
+            "name": "Ingrown Nails",
+            "description": "Condition where the edge of a toenail grows into the surrounding skin, causing pain, swelling, and sometimes infection.",
+            "symptoms": [
+              "Pain and tenderness along the side of the toenail",
+              "Swelling",
+              "Redness",
+              "Infection (pus drainage, warmth, and increased pain)"
+            ],
+            "first_aid": [
+              "**Soak your foot** in warm, soapy water several times a day.",
+              "**Gently lift the edge** of the ingrown toenail and insert a small piece of cotton or dental floss between the nail and the skin to help the nail grow above the skin edge.",
+              "**Apply antibiotic cream** to the affected area to prevent infection.",
+              "If the ingrown nail is severe or infected, **seek medical attention**."
+            ]
+          },
+          "Class_6": {
+            "name": "Laceration",
+            "description": "A deep cut or tear in the skin or flesh caused by a sharp object or trauma.",
+            "symptoms": [
+              "Bleeding",
+              "Pain",
+              "Swelling",
+              "Possibly loss of function (depending on severity and location)"
+            ],
+            "first_aid": [
+              "**Apply pressure** to the wound using a clean cloth or sterile bandage to stop bleeding.",
+              "**Clean the wound** with mild soap and water to remove dirt and debris.",
+              "**Apply an antibiotic ointment** to help prevent infection.",
+              "**Cover the wound** with a sterile bandage or adhesive strip.",
+              "If the laceration is deep, wide, or won't stop bleeding, **seek medical attention**."
+            ]
+          },
+          "Class_7": {
+            "name": "Stab Wound",
+            "description": "An injury caused by a sharp, pointed object penetrating the skin and underlying tissues.",
+            "symptoms": [
+              "Bleeding",
+              "Pain",
+              "Possibly numbness or loss of function (depending on severity and location)"
+            ],
+            "first_aid": [
+              "**Call emergency services immediately** if the stab wound is severe, deep, or in a critical area.",
+              "**Apply pressure** to the wound with a clean cloth or sterile bandage to control bleeding.",
+              "**Do not remove the object** if it's still embedded in the wound.",
+              "**Keep the person lying down** and calm until medical help arrives.",
+              "If the person shows signs of shock (pale skin, rapid heartbeat, shallow breathing), **lay them down, elevate their legs, and cover them with a blanket**."
+            ]
+          }
+}
