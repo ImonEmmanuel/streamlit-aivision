@@ -24,7 +24,7 @@ def label_func(fname):
     return category if category in labels else "unknown"
 
 import pathlib
-pathlib.PosixPath = pathlib.WindowsPath
+pathlib.PosixPath = pathlib.PurePosixPath
 
 
 wound_model = load_learner(open("./trained_model/gpu_densenet169.pkl", "rb"), cpu = True)
