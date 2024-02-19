@@ -23,6 +23,9 @@ def label_func(fname):
     category = fname.parts[-2]  # Extract the category name from the path
     return category if category in labels else "unknown"
 
+import pathlib
+pathlib.PosixPath = pathlib.WindowsPath
+
 
 wound_model = load_learner(open("./trained_model/gpu_densenet169.pkl", "rb"), cpu = True)
 
