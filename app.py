@@ -73,7 +73,7 @@ if uploaded_file:
         st.image(image, width=300)
 
         class_info = get_class_info(data[wound_class])
-        st.subheader("Class Information")
+        st.subheader("Injury Information")
         st.write(f"Predicted Class: {class_info['name']}")
         st.write(f"Description: {class_info['description']}")
         st.write("Symptoms:")
