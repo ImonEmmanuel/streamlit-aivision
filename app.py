@@ -45,7 +45,7 @@ classes_dict = {
 
 def classify_img(uploaded_file, model : load_learner):
     is_wound, _, confidence = model.predict(uploaded_file)
-    return classes_dict[is_wound], is_wound, confidence 
+    return classes_dict[is_wound], is_wound, confidence[_] 
 
 def get_class_info(class_data):
     info = {
@@ -71,17 +71,21 @@ if uploaded_file:
 
         # Display prediction
         st.image(image, width=300)
-
-        class_info = get_class_info(data[wound_class])
-        st.subheader("Injury Information")
-        st.write(f"Predicted Class: {class_info['name']}")
-        st.write(f"Description: {class_info['description']}")
-        st.write("Symptoms:")
-        for symptom in class_info['symptoms']:
-            st.write(f"- {symptom}")
-        st.write("First Aid:")
-        for step in class_info['first_aid']:
-            st.write(step)
+        if confidence <= 0.95:
+             st.subheader("Image is not an Injury Data")
+             st.write(f"{confidence}")
+        else:     
+            class_info = get_class_info(data[wound_class])
+            st.subheader("Injury Information")
+            st.write(f"Predicted Class: {class_info['name']}")
+            st.write(f"Description: {class_info['description']}")
+            st.write("Symptoms:")
+            for symptom in class_info['symptoms']:
+                st.write(f"- {symptom}")
+            st.write("First Aid:")
+            for step in class_info['first_aid']:
+                st.write(step)
+            st.write(f"{confidence}")
 
 if __name__ == "__main__":
         print("Start")
