@@ -23,11 +23,17 @@ def label_func(fname):
     category = fname.parts[-2]  # Extract the category name from the path
     return category if category in labels else "unknown"
 
+def label_funcs(fname):
+    category = fname.parts[-2]  # Extract the category name from the path
+    return category if category in labels else "unknown"
+
 import pathlib
 pathlib.PosixPath = pathlib.PurePosixPath
 
 
 wound_model = load_learner(open("./trained_model/gpu_densenet169.pkl", "rb"), cpu = True)
+human_model = load_learner(open("./trained_model/vggnet_humanmodel.pkl", "rb"), cpu = True)
+
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
 labels = ["Class_1", "Class_2", "Class_3", "Class_4", "Class_5", "Class_6", "Class_7", "Class_8"]
@@ -46,6 +52,12 @@ classes_dict = {
 def classify_img(uploaded_file, model : load_learner):
     is_wound, _, confidence = model.predict(uploaded_file)
     return classes_dict[is_wound], is_wound, confidence[_] 
+
+def classify_human(uploaded_file, model : load_learner):
+    is_wound, _, confidence = model.predict(uploaded_file)
+    if is_wound == "Class_1":
+         return False
+    return True
 
 def get_class_info(class_data):
     info = {
@@ -67,14 +79,14 @@ if uploaded_file:
         image = image.convert("RGB")
         image = image.resize(inputShape)
 
-        class_name, wound_class, confidence = classify_img(image, wound_model)
 
         # Display prediction
         st.image(image, width=300)
-        if confidence <= 0.95:
+        if classify_human(image, human_model):
              st.subheader("Image is not an Injury Data")
-             st.write(f"{confidence}")
-        else:     
+             st.write("Upload another Image")
+        else:
+            class_name, wound_class, confidence = classify_img(image, wound_model)     
             class_info = get_class_info(data[wound_class])
             st.subheader("Injury Information")
             st.write(f"Predicted Class: {class_info['name']}")
