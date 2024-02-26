@@ -31,8 +31,8 @@ import pathlib
 pathlib.PosixPath = pathlib.PurePosixPath
 
 
-wound_model = load_learner(open("./trained_model/gpu_densenet169.pkl", "rb"), cpu = True)
-human_model = load_learner(open("./trained_model/vggnet_humanmodel.pkl", "rb"), cpu = True)
+wound_model = load_learner(open("trained_model\gpu_densenet169.pkl", "rb"), cpu = True)
+human_model = load_learner(open("trained_model\vggnet_humanmodel.pkl", "rb"), cpu = True)
 
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
